@@ -1,0 +1,507 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>TrueCar Homework Assignment</title>
+        <meta name="description" content="Yeoman generator">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <meta name="author" content="BrandTurner, Inc.">
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="image_src" href="images/default-icons/app-icon.png">
+
+        <meta property="og:title" content="TrueCarTest">
+        <meta property="og:description" content="Yeoman generator">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="images/default-icons/app-icon.png">
+        <meta property="fb:app_id" content="444172322357134">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(app) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <style>
+        /* Reet
+-------------------------------------------------- */
+html, body, div, span, h4, a, ol, li, img, header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: top;
+}
+
+header {
+    display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+:focus{
+    outline: none;
+}
+
+body {
+    text-align: center;
+    background: #eeeeee;
+    font-family: 'Arial';
+    padding: 30px;
+}
+
+main {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 1000px;
+}
+
+.container {
+    background: #ffffff;
+    border: solid 1px #dddddd;
+    overflow: hidden;
+    margin-top: 14px;
+}
+
+input {
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: solid 2px #dddddd;
+    min-height: 24px;
+    font-size: 12px;
+    margin-right: 10px;
+    font-family: 'Arial';
+    vertical-align: top;
+}
+
+textarea {
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: solid 2px #dddddd;
+    min-height: 80px;
+    font-size: 12px;
+    resize: vertical;
+    width: 95%;
+    font-family: 'Arial';
+}
+
+h4 {
+    color: #444444;
+    margin-bottom: 5px;
+}
+
+.content {
+    background: #ffffff;
+    border: solid 1px #dddddd;
+    overflow: hidden;
+    margin-top: 14px;
+}
+
+.divControl {
+    margin-top: 8px;
+    margin-right:10px;
+    overflow: hidden;
+}
+
+.divLeftColumn {
+    width: 45%;
+    margin: 36px 10px;
+    padding: 10px 5px 20px 5px;
+    display: inline-block;
+    /* I got these gradients from an online generator, but you didn't expect me to do these on my own! */
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(170,170,170,1);
+    -moz-box-shadow: 1px 1px 2px 2px rgba(170,170,170,1);
+    box-shadow: 1px 1px 2px 2px rgba(170,170,170,1);
+}
+
+.divRightColumn {
+    width: 45%;
+    margin: 10px;
+    padding: 4px 5px;
+    display: inline-block;
+}
+
+.divInput {
+    float: right;
+    width: 75%;
+    font-weight: 100;
+    padding-top: 10px;
+    color: #262626;
+}
+
+.divLabel {
+    float: left;
+    width: 20%;
+    font-weight: 100;
+    font-size: 14px;
+    padding-top: 18px;
+    color: #262626;
+    text-align: right;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: .875em;
+    padding: 8px 15px;
+    white-space: nowrap;
+    background: rgba(116,194,56,1);
+    background: -moz-linear-gradient(top, rgba(116,194,56,1) 0%, rgba(47,80,29,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(116,194,56,1)), color-stop(100%, rgba(47,80,29,1)));
+    background: -webkit-linear-gradient(top, rgba(116,194,56,1) 0%, rgba(47,80,29,1) 100%);
+    background: -o-linear-gradient(top, rgba(116,194,56,1) 0%, rgba(47,80,29,1) 100%);
+    background: -ms-linear-gradient(top, rgba(116,194,56,1) 0%, rgba(47,80,29,1) 100%);
+    background: linear-gradient(to bottom, rgba(116,194,56,1) 0%, rgba(47,80,29,1) 100%);
+}
+
+input {
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: solid 2px #dddddd;
+    min-height: 24px;
+    width: 68%;
+    font-size: .75em;
+    margin-right: 10px;
+    font-family: 'Arial';
+    vertical-align: top;
+}
+
+textarea {
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: solid 2px #dddddd;
+    min-height: 80px;
+    font-size: .75em;
+    resize: vertical;
+    width: 95%;
+    font-family: 'Arial';
+}
+
+ol {
+    list-style-type: none;
+    border: solid 1px #dddddd;
+    border-width: 1px 0;
+    counter-reset: index;
+}
+
+ol li {
+    opacity: 1;
+    margin: 1px auto;
+    min-height: 35px;
+    color: #ff7f00;
+    padding: 12px 2px 0px 45px;
+    font-family: 'Georgia';
+    border: dashed 1px #dddddd;
+    border-width: 0 0 1px 0;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+}
+
+ol li.invisible {
+  opacity: 0;
+}
+
+ol li:last-child {
+    border-width: 0;
+}
+
+ol li:before {
+    position: absolute;
+    margin-left: -44px;
+    margin-top: -12px;
+    height: 16px;
+    content: counter(index) ".";
+    counter-increment: index;
+    color: #000000;
+    padding: 14px 8px 10px 10px;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(255,250,232,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+}
+
+ol li a {
+    float: right;
+    margin-right: 5px;
+    color: #4e9ee0;
+    font-family: 'Arial';
+    font-size: .75em;
+    font-weight: 100;
+    cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="http://truecar.com" target="_blank">
+                    <img src="http://i.imgur.com/XZR4z2Z.png">
+                </a>
+            </header>
+            <div class="content">
+                <div class="divLeftColumn">
+                     <div class="divControl">
+                            <div class="divLabel">Add Item:</div>
+                            <div class="divInput">
+                                <input type="text" id="addItem"/>
+                                <button id="add_item">Add &#9654;</button>
+                            </div>
+                        </div>
+                        <div class="divControl">
+                            <div class="divLabel">JSON:</div>
+                            <div class="divInput">
+                                <textarea id="addJSON"></textarea>
+                            </div>
+                        </div>
+                        <div class="divControl">
+                            <div class="divInput"><button id="loadJSON">Load JSON</button>&nbsp;<button id="clearJSON">Clear JSON</button></div>
+                        </div>
+                </div>
+                <div class="divRightColumn">
+                    <h4>Items</h4>
+                    <ol id="itemList">
+                        <li>Item 1<a id="delete-0">delete</a></li>
+                        <li>Item 2<a id="delete-1">delete</a></li>
+                        <li>Item 3<a id="delete-2">delete</a></li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+            <script type="text/javascript">
+                /*global TrueCarTest, window, jQuery*/
+(function () {
+  'use strict';
+
+  // Event Utility Boilerplate Code
+  var EventUtil =  {
+    addHandler: function(element, event, handler) {
+      if (element.addEventListener) {
+        element.addEventListener(event, handler);
+      } else if (element.attachEvent) {
+        element.attachEvent('on' + event, handler);
+      } else {
+        element['on' + event] = handler;
+      }
+    },
+
+    getEvent: function(event) {
+      return event ? event : window.event;
+    },
+
+    getTarget: function(event) {
+      return event.target || event.srcElement;
+    }
+  };
+
+    // Gets the index of li element in an ol or ul
+  function getNodeIndex(node) {
+    var index = 0;
+    while ( (node = node.previousSibling) ) {
+        if (node.nodeType !== 3 || !/^\s*$/.test(node.data)) {
+            index++;
+        }
+    }
+    return index;
+  }
+
+  function updateJSONTextArea() {
+    jsonItems.value = JSON.stringify(itemListArr);
+  }
+
+  function addToList(item) {
+    if (!item.value) {
+      window.alert('The field is empty. Please input a value to add');
+      return;
+    }
+
+    itemListArr.push(item.value);
+    updateList(item);
+  }
+
+  function clearList() {
+    while(itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild);
+    }
+  }
+
+  function fadeIn(el, display){
+    el.style.opacity = 0;
+    el.style.display = display || 'block';
+
+    (function fade() {
+      var val = parseFloat(el.style.opacity);
+      if ((val += 0.1) < 1) {
+        el.style.opacity = val;
+        requestAnimationFrame(fade);
+      }
+    })();
+  }
+
+  function updateList(item) {
+    var newItem         = document.createElement('li'),
+        newItemText     = document.createTextNode(item.value),
+        newItemLink     = document.createElement('a'),
+        newItemLinkText = document.createTextNode('delete');
+
+    newItemLink.id = 'delete-' + (itemListArr.length - 1);
+    newItemLink.appendChild(newItemLinkText);
+    newItem.appendChild(newItemText);
+    newItem.appendChild(newItemLink);
+    itemList.appendChild(newItem);
+    fadeIn(newItem);
+    updateJSONTextArea();
+
+    item.value='';
+  }
+
+  function updateListByJSON() {
+    clearList();
+
+    for (var i=0;i<itemListArr.length;i++) {
+      var newItem         = document.createElement('li'),
+          newItemText     = document.createTextNode(itemListArr[i]),
+          newItemLink     = document.createElement('a'),
+          newItemLinkText = document.createTextNode('delete');
+
+      newItemLink.id = 'delete-' + i;
+      newItemLink.appendChild(newItemLinkText);
+      newItem.appendChild(newItemText);
+      newItem.appendChild(newItemLink);
+      itemList.appendChild(newItem);
+      fadeIn(newItem);
+    }
+  }
+
+  function addJSONToList(jsonItems) {
+    try {
+      itemListArr = JSON.parse(jsonItems.value);
+    } catch(e) {
+      window.alert('The JSON inputted is invalid. Please enter a valid JSON String');
+    }
+    updateListByJSON();
+  }
+
+  function fadeOutItem(target) {
+    var parent  = target.parentNode;
+    var idx     = getNodeIndex(parent);
+
+    transitionType = 'fadeOut';
+    document.getElementById('itemList').children[idx].className = 'invisible';
+  }
+
+  function removeFromList(target) {
+    var idx = getNodeIndex(target);
+
+    target.parentNode.removeChild(target);
+    itemListArr.splice(idx, 1);
+    updateJSONTextArea();
+  }
+
+  // Taken from Modernizer. Normailizes CSS3 Transition function across browsers
+  function transitionEndEventName () {
+    var i,
+        el = document.createElement('div'),
+        transitions = {
+            'WebkitTransition' : 'webkitTransitionEnd',
+            'MozTransition'    : 'transitionend',
+            'OTransition'      : 'oTransitionEnd',
+            'msTransition'     : 'MSTransitionEnd',
+            'transition'       : 'transitionend'
+        };
+
+    for (i in transitions) {
+        if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
+            return transitions[i];
+        }
+    }
+  }
+
+  // Initialize list and JSON Text area based on rendered HTML
+  function init() {
+    var initialList = itemList.getElementsByTagName('li');
+      for (var i =0;i<initialList.length;i++) {
+        itemListArr.push(initialList[i].childNodes[0].nodeValue);
+      }
+      jsonItems.value=JSON.stringify(itemListArr);
+  }
+
+  // Application variables
+  var transitionEnd   = transitionEndEventName(),
+      transitionType  = null,
+      item            = document.getElementById('addItem'),
+      jsonItems       = document.getElementById('addJSON'),
+      itemList        = document.getElementById('itemList'),
+      itemListArr     = [];
+
+  //Vanilla JS version of document.ready
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    EventUtil.addHandler(document.documentElement, transitionEnd, function(event) {
+      var target = EventUtil.getTarget(event);
+      if (transitionType) {
+        removeFromList(target);
+        transitionType = null;
+      }
+      target.removeAttribute('style');
+    });
+
+    // Delegates click events on the entire document. We will only consider elements with an ID
+    EventUtil.addHandler(document.documentElement, 'click', function(event) {
+      var target = EventUtil.getTarget(event);
+
+      if (target.id) {
+        switch(true){
+          case(target.id==='add_item'):
+            addToList(item);
+            break;
+          case(target.id==='clearJSON'):
+            clearList();
+            itemListArr = [];
+            jsonItems.value = '';
+            break;
+          case(target.id==='loadJSON'):
+            addJSONToList(jsonItems);
+            break;
+          case(target.id.toLowerCase().indexOf('delete') > -1):
+            fadeOutItem(target);
+            break;
+        }
+      }
+    });
+
+    init();
+  });
+
+})();
+
+            </script>
+    </body>
+
+
+        <!-- build:js scripts/main.js -->
+    
+        <!-- endbuild -->
+
+</html>
